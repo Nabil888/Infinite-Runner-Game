@@ -85,36 +85,6 @@ function draw(){
   
   if(gameState === "start"){
     ninja.depth+=1;
-    bg1.x = 350;
-    bg1.y = 350;
-    bg2.x = 1750;
-    bg2.y = 350;
-    bg3.x = 350;
-    bg3.y = 1050;
-    bg4.x = 1750;
-    bg4.y = 1050;
-    bg5.x = 350;
-    bg5.y = -350;
-    bg6.x = 1750;
-    bg6.y = -350;
-    bg7.x = 350;
-    bg7.y = 1750;
-    bg8.x = 1750;
-    bg8.y = 1750;
-    
-    spawnGround();
-    restart.visible = false;
-    gameOver.visible = false;
-    bg1.visible = true;
-    bg2.visible = true;
-    bg3.visible = true;
-    bg4.visible = true;
-    bg5.visible = true;
-    bg6.visible = true;
-    bg7.visible = true;
-    bg8.visible = true;
-    ninja.visible = true;
-    ground1.visible = true;
     if(camera.position.x>bg1.x+bg1.width){
       bg1.x = bg2.x+1400;
     }
@@ -139,6 +109,21 @@ function draw(){
     if(camera.position.x>bg8.x+bg8.width){
       bg8.x = bg7.x+1400;
     }
+    
+    spawnGround();
+    restart.visible = false;
+    gameOver.visible = false;
+    bg1.visible = true;
+    bg2.visible = true;
+    bg3.visible = true;
+    bg4.visible = true;
+    bg5.visible = true;
+    bg6.visible = true;
+    bg7.visible = true;
+    bg8.visible = true;
+    ninja.visible = true;
+    ground1.visible = true;
+    
     if(keyWentDown(RIGHT_ARROW)){
      ninja.changeAnimation("run",ninjarun);
      ninja.velocityX = 14;
@@ -200,7 +185,24 @@ function draw(){
     score = 0;
     ninja.x = 150;
     ninja.y = 200;
-    
+    camera.position.y = ninja.y;
+    camera.position.x = ninja.x+300;
+    bg1.x = 350;
+    bg1.y = 350;
+    bg2.x = 1750;
+    bg2.y = 350;
+    bg3.x = 350;
+    bg3.y = 1050;
+    bg4.x = 1750;
+    bg4.y = 1050;
+    bg5.x = 350;
+    bg5.y = -350;
+    bg6.x = 1750;
+    bg6.y = -350;
+    bg7.x = 350;
+    bg7.y = 1750;
+    bg8.x = 1750;
+    bg8.y = 1750;
   
   }
   
